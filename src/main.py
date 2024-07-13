@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.routing import APIRoute
 from fastapi.responses import JSONResponse
 
+from models import Base
+
 
 def custom_generate_unique_id(route: APIRoute):
     return f"{route.tags[0]}-{route.name}"
